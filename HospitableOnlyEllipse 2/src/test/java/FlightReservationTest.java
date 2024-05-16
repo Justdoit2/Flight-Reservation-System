@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class FlightReservationTest {
     @Test
     public void testFlightReservation() {
-        Passenger p = new Passenger("alma",1,002);
+        Passenger p = new Passenger("Jane",1,002);
         Seat s = new Seat(SeatStatus.AVAILABLE, "1", SeatType.REGULAR);
         HashMap<Passenger, Seat> seatMap = new HashMap<>();
         seatMap.put(p, s);
@@ -16,7 +16,7 @@ public class FlightReservationTest {
         assertEquals("000", flightReservation.getReservationNumber());
 
         // Test addPassenger
-        Passenger p2 = new Passenger("Tom",2,003);
+        Passenger p2 = new Passenger("Joe",2,003);
         Seat s2 = new Seat(SeatStatus.BOOKED, "2", SeatType.EMERGENCY_EXIT);
         flightReservation.addPassenger(p2, s2);
 
